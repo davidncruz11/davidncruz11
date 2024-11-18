@@ -1,1 +1,1 @@
-=IF(C2="Yes", "Complete Info: ", "") & IF(D2="Yes", " Correct Info: ", "") & IF(E2<>"", " " & E2, "")
+=IF(AND(C2="Yes", D2="Yes"), "Complete and Correct Information", IF(AND(C2="Yes", D2="No"), E2, IF(AND(C2="No", D2="Yes"), "Incomplete Info", IF(AND(C2="No", D2="No"), E2, ""))))
